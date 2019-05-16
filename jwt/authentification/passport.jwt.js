@@ -77,15 +77,3 @@ exports.generateHashPassword = function generateHashPassword(password) {
         .digest('hex');
 };
 
-exports.asyncJWTVerify = function asyncJWTVerify(encodedToken) {
-    return new Promise((resolve, reject) => {
-        JsonWebToken.verify(encodedToken, secret, (err) => {
-            if (err) {
-                reject(err);
-            } else {
-                resolve();
-            }
-        });
-    });
-};
-

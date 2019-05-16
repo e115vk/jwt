@@ -38,7 +38,7 @@ class Application {
         const mongoModule = new dataBase();
         await this.http.close();
         await mongoModule.disconnect();
-        process.exit();
+        //process.exit();
     }
 
     registerRoutes() {
