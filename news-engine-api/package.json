@@ -1,0 +1,48 @@
+{
+  "name": "news-engine-api",
+  "version": "1.0.0",
+  "description": "News Engine API Service",
+  "main": "index.js",
+  "scripts": {
+    "test": "yarn unit",
+    "build": "rm -rf dist && tsc --outDir dist",
+    "server": "yarn build && yarn start",
+    "migrate": "yarn typeorm:cli migration:run",
+    "start": "ts-node app/app.ts",
+    "typeorm:cli": "ts-node ./node_modules/typeorm/cli -f ./app/ormconfig.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/e115vk/news-engine-api.git"
+  },
+  "keywords": [
+    "Valamis",
+    "Test",
+    "News",
+    "Engine"
+  ],
+  "author": "Valerii Epifanov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/e115vk/news-engine-api/issues"
+  },
+  "homepage": "https://gitlab.com/e115vk/news-engine-api#readme",
+  "dependencies": {
+    "@types/body-parser": "^1.17.1",
+    "@types/faker": "^4.1.5",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "faker": "^4.1.0",
+    "pg": "^7.12.1",
+    "tsconfig-paths": "^3.8.0",
+    "typeorm": "^0.2.18",
+    "typescript": "^3.5.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.1",
+    "@types/node": "^12.7.4",
+    "prettier": "^1.18.2",
+    "ts-node": "^8.3.0"
+  }
+}

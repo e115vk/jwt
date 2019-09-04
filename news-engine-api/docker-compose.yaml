@@ -1,0 +1,13 @@
+version: "3.0"
+
+services:
+  postgre:
+    image: postgres:11.4-alpine
+    container_name: news-engine_postgres
+    restart: always
+    ports:
+      - 2432:5432
+    environment:
+      POSTGRES_PASSWORD: news-engine-password
+      POSTGRES_DB: news-engine
+      POSTGRES_USER: news-engine-user

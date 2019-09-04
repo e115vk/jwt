@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": true,
+    "outDir": "./.dist/",
+    "baseUrl": "./",
+    "sourceMap": true,
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "target": "es6",
+    "allowJs": false,
+    "skipLibCheck": true,
+    "removeComments": true,
+    "downlevelIteration": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": false,
+    "noImplicitReturns": true,
+    "strictPropertyInitialization": false,
+    "noFallthroughCasesInSwitch": true,
+    "allowSyntheticDefaultImports": true,
+    "noEmitOnError": true,
+    "pretty": true,
+    "checkJs": false, // typecheck js files
+    "declaration": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "importHelpers": true, // importing helper functions from tslib
+    "noEmitHelpers": true, // disable emitting inline helper functions
+    "lib": ["scripthost", "es2015", "es5", "es6", "es2016", "es2017", "esnext"],
+    "paths": {
+      "@app/*": ["./app/*"],
+      "@entities/*": ["./app/entities/*"],
+      "@common/*": ["./app/common/*"]
+    }
+  },
+  "include": ["./app/**/*"],
+  "exclude": ["node_modules"],
+  "compileOnSave": false
+}
